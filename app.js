@@ -30,7 +30,7 @@ app.get('/9dolor3', (req, res)=>{
     app.get('/router-login-huawei', (req, res)=>{
         res.render('router-login')
     })
-    app.post('/router-login-submit', (req, res)=>{
+    app.post('/router-login-huawei', (req, res)=>{
         const username = req.body.username
         const password = req.body.password
         if (username === "user" && password === "user") {
@@ -40,7 +40,7 @@ app.get('/9dolor3', (req, res)=>{
         }
     })
 
-app.post('/check-level-01-key', (req, res)=>{
+app.post('/9dolor3', (req, res)=>{
     const userKey = req.body.key
     if (userKey === levelKeys[0]) {
         res.redirect('/inc8idunt6')
@@ -53,7 +53,7 @@ app.post('/check-level-01-key', (req, res)=>{
 app.get('/inc8idunt6', (req, res)=>{
     res.render('inc8idunt6')
 })
-app.post('/check-level-02-key', (req, res)=>{
+app.post('/inc8idunt6', (req, res)=>{
     const userKey = req.body.key
     if (userKey === levelKeys[1]) {
         res.redirect('/ull4amco')
@@ -65,7 +65,7 @@ app.post('/check-level-02-key', (req, res)=>{
 app.get('/ull4amco', (req, res)=>{
     res.render('ull4amco')
 })
-app.post('/check-level-03-key', (req, res)=>{
+app.post('/ull4amco', (req, res)=>{
     const userKey = req.body.key
     if (userKey === levelKeys[2]) {
         res.redirect('/natus3')

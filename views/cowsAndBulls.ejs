@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cows And Bulls</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .container{
+            max-width: 300px;
+            margin: auto;
+        }
+        input{
+            padding: .5rem 1rem;
+        }
+        input[type='text']{
+            width: 60%;
+        }
+        input[type='submit']{
+            width: auto;
+        }
+        #display-table{
+            width: 100%;
+            margin-top: 3rem;
+        }
+        #display-table td{
+            padding: .5rem 1rem;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        .error{
+            height: auto;
+            text-align: center;
+            padding: .5rem 1rem;
+            display: none;
+        }
+        .false{
+            display: block;
+            background-color: #F2DEDE;
+            border: 1px solid #EED4D7;
+            color: #A94442;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="error"></p>
+        <h2>Cows & Bulls</h2>
+        <h4>Tries : <%= numTries %></h4>
+        <form action="/cows-and-bulls" method="POST" id="main-submit">
+            <input type="text" placeholder="1234" name="userTry" id="userTry" required>
+            <input type="submit" value="Check">
+        </form>
+        <table id="display-table">
+            <tr>
+                <td>Your Try</td>
+                <td>Cows</td>
+                <td>Bulls</td>
+            </tr>
+            <% allTries.forEach(attempt => {%>
+                <tr>
+                    <td><%= attempt.uTry %></td>
+                    <td><%= attempt.cows %></td>
+                    <td><%= attempt.bulls %></td>
+                </tr>
+            <%}) %>
+        </table>
+    </div>
+    <script>
+        const form = document.querySelector('#main-submit')
+        const input = document.querySelector('#userTry')
+        const warning = document.querySelector('.error')
+
+        form.addEventListener('submit', e =>{
+            e.preventDefault()
+            const userTry = input.value
+
+            if(userTry.length == 4){
+                let matches = 0
+                for (let i = 0; i < userTry.length; i++) {
+                    const digit = userTry[i];
+                    for (let j = 0; j < userTry.length; j++) {
+                        const element = userTry[j];
+                        if(digit == element){
+                            matches ++
+                        }
+                    }
+                }
+                if (matches != 4) {
+                    warning.classList.add('false')
+                    warning.innerHTML = "Do not use a digit more than once within the same try."
+                    return
+                }else{
+                    console.log('all good')
+                    form.submit()
+                }
+            }else{
+                warning.classList.add('false')
+                warning.innerHTML = "Too long, only 4 digits are needed"
+                return
+            }
+        })
+    </script>
+</body>
+</html>

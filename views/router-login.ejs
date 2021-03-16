@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Login</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .container{
+            max-width: 300px;
+            margin: auto;
+            margin-top: 3rem;
+        }
+        input{
+            display: block;
+            width: 100%;
+            height: 30px;
+            padding-left: 1rem;
+            margin-top: .3rem;
+            border: 1px solid #D00328;
+        }
+        input[type="submit"]{
+            border: none;
+            background-color: #D00328;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/img/huaweiLogo.png" alt="logo" width="100px">
+            <h1>Login Gateway</h1>
+        </header>
+        <form action="/router-login-submit" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

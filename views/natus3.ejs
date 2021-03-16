@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF_KH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="/" class="main-link">CTF_KH</a></h1>
+            <i class="fas fa-exclamation-circle"></i>
+        </header>
+
+        <main>
+            <section id="level-count">
+                <h3>Level 4</h3>
+            </section>
+            <section id="level-riddle" class="spacer">
+                <p>🐄 Cows and Bulls 🐂</p>
+                <p>The players each write a 4-digit secret number. The digits must be all different. Then, in turn, the players try to guess their opponent's number who gives the number of matches. If the matching digits are in their right positions, they are "bulls", if in different positions, they are "cows". Example:</p>
+                <br>
+                <ul>
+                    <li>Secret number: 4271</li>
+                    <li>Opponent's try: 1234</li>
+                </ul>
+                <br>
+                <p>Answer: 1 bull and 2 cows. (The bull is "2", the cows are "4" and "1".)</p>
+                <a href="/cows-and-bulls">Play to get the 🔑</a>
+            </section>
+            <section id="level-submit" class="spacer">
+                <form action="/natus3" method="POST">
+                    <label>
+                        <input type="text" placeholder="CTF[keyInHere]" name="key" required>
+                        <button>
+                            <i class="far fa-paper-plane"></i>
+                        </button>
+                    </label>
+                </form>
+            </section>
+        </main>
+        <!-- end of container -->
+    </div>
+    
+</body>
+</html>

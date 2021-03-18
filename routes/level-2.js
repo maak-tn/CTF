@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
+const levelKeys = require('../public/js/levelKeys')
 
-router.get('/inc8idunt6', (req, res)=>{
+router.get('/', (req, res)=>{
     res.render('inc8idunt6')
 })
-router.post('/inc8idunt6', (req, res)=>{
+router.post('/', (req, res)=>{
     const userKey = req.body.key
     if (userKey === levelKeys[1]) {
         res.redirect('/ull4amco')

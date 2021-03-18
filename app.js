@@ -10,19 +10,13 @@ const levelThreeRoutes = require('./routes/level-3')
 const levelFourRoutes = require('./routes/level-4')
 const levelFiveRoutes = require('./routes/level-5')
 const levelSixRoutes = require('./routes/level-6')
+const routerLoginRoute = require('./routes/router-login')
+const cowsAndBullsRoute = require('./routes/cows-and-bulls')
 
 // view engine + public folder
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
-
-const levelKeys = [
-    "CTF[|/|1$3]",
-    "CTF[90531653162858]",
-    "CTF[havefun]",
-    "CTF[01110011 01100001 01101000 01101001 01110100]",
-    "CTF[UQ6rHtT]"
-]
 
 // ========== Routes ==========
 app.get('/', (req, res)=>{
@@ -30,22 +24,24 @@ app.get('/', (req, res)=>{
 })
 
 //  ========== LEVEL 1 ========== 
-app.get('/9dolor3', levelOneRoutes)
+app.use('/9dolor3', levelOneRoutes)
+app.use('/router-login-huawei', routerLoginRoute)
 
 //  ========== LEVEL 2 ========== 
-app.get('/inc8idunt6', levelTwoRoutes)
+app.use('/inc8idunt6', levelTwoRoutes)
 
 //  ========== LEVEL 3 ========== 
-app.get('/ull4amco', levelThreeRoutes)
+app.use('/ull4amco', levelThreeRoutes)
 
 //  ========== LEVEL 4 ========== 
-app.get('/natus3', levelFourRoutes)
+app.use('/natus3', levelFourRoutes)
+app.use('/cows-and-bulls', cowsAndBullsRoute)
 
 //  ========== LEVEL 5 ========== 
-app.get('/opt8io0', levelFiveRoutes)
+app.use('/opt8io0', levelFiveRoutes)
 
 //  ========== END ========== 
-app.get('/end-congrats', levelSixRoutes)
+app.use('/end-congrats', levelSixRoutes)
 
 
 //=======================================================

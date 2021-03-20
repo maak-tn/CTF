@@ -10,7 +10,7 @@ router.post('/', (req, res)=>{
     if (userKey === levelKeys[1]) {
         res.redirect('/ull4amco')
     }else{
-        res.redirect('/')
+        res.redirect('/inc8idunt6')
     }
 })
 

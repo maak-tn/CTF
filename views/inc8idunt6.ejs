@@ -12,9 +12,16 @@
     <div class="container">
         <header>
             <h1><a href="/" class="main-link">CTF_KH</a></h1>
-            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-exclamation-circle" id="help-button"></i>
         </header>
-
+        <section id="help-dialog">
+            <div id="help-header">
+                <h4>Hint</h4>
+                <span id="help-exit-button">X</span>
+            </div>
+            <p>Chemical elements</p>
+        </section>
+        <div id="overlay"></div>
         <main>
             <section id="level-count">
                 <h3>Level 2</h3>
@@ -46,6 +53,6 @@
         </main>
         <!-- end of container -->
     </div>
-    
+    <script src="/js/help-button.js"></script>
 </body>
 </html>

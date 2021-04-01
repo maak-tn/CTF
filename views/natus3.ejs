@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTF_KH</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1><a href="/" class="main-link">CTF_KH</a></h1>
-            <i class="fas fa-exclamation-circle" id="help-button"></i>
-        </header>
+<%- include("partials/header") %>
         <section id="help-dialog">
             <div id="help-header">
                 <h4>Hint</h4>
@@ -49,8 +34,4 @@
                 </form>
             </section>
         </main>
-        <!-- end of container -->
-    </div>
-    <script src="/js/help-button.js"></script>
-</body>
-</html>
+<%- include("partials/footer") %>

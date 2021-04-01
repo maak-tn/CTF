@@ -1,35 +1,38 @@
-## A Simple Capture the flag game
+# CTF-Basic
 
+A simple capture the flag game.
+Please note that this CTF, unlike others, does not require any skills.
 
+## Preview
 
-Deployed here: https://ctfkh.herokuapp.com/ 
+![](github/levelOneScreenshot.png)
 
+Deployed on Heroku 👉 <https://ctfkh.herokuapp.com/>
 
-### Getting Started
+## Getting Started 🛠
+
 These instructions will get a copy of the project up and running on your machine for development and testing purposes.
 
 ### Prerequisites
+
 To run this project locally, the following tools need to be installed:
+
 1. Node.js
-use npm install to install all dependencies
+2. VSCode / any editor of your choice
 
-### Development:
-1. clone the project
-2. Make sure you have npm installed
-3. Move into the project directory and install it's dependencies:
-    Node.js
-    Express.js
-    ejs
-    body-parser
-4. To start the application run the following command
-    npm start
-5. visit http://localhost:5000/
+### Development
 
+1. Clone the project
+2. Use `npm install` to install all dependencies within [package.json](package.json)
+3. To start the application run `npm start`
+4. Visit <http://localhost:5000/>
 
+## Contributing 🙏
 
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+Make sure to check the [CONTRIBUTION GUIDE](CONTRIBUTION.md)
 
-### License
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-MIT license
-Copyright 2020 © openSource-jesaym.
-
+- **[MIT license](LICENSE)**
+Copyright 2020 © JesAym.

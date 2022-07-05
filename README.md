@@ -3,29 +3,12 @@
 A simple capture the flag game.
 Please note that this CTF, unlike others, does not require any skills.
 
-## Preview
-
-![](github/levelOneScreenshot.png)
-
 Deployed on Heroku 👉 <https://ctfkh.herokuapp.com/>
 
-## Getting Started 🛠
+## Being refactored 🚧
 
-These instructions will get a copy of the project up and running on your machine for development and testing purposes.
-
-### Prerequisites
-
-To run this project locally, the following tools need to be installed:
-
-1. Node.js
-2. VSCode / any editor of your choice
-
-### Development
-
-1. Clone the project
-2. Use `npm install` to install all dependencies within [package.json](package.json)
-3. To start the application run `npm start`
-4. Visit <http://localhost:5000/>
+THis project is being refactored using MEAN stack.
+MVC Pattern will be implemented.
 
 ## Contributing 🙏
 

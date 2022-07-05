@@ -1,0 +1,21 @@
+section{
+    height: 100%;
+    width: var(--sidebar-width);
+    border-right: 1px solid var(--border-color);
+    background-color: var(--offset-bg);
+
+    #brand{
+        width: 100%;
+        height: var(--header-height);
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        h1{
+            font-weight: 500;
+            color: var(--text-blue);
+            cursor: pointer;
+        }
+    }
+}
